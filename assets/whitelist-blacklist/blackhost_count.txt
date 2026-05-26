@@ -27,5 +27,3 @@ http://cdn9.163189.xyz
 http://122.152.202.33/s/81a8a44f/index.m3u8
 http://194.147.100.173
 https://stream1.freetv.fun
-https://epg.pw
-http://gaoyitv.6600.org:9901
