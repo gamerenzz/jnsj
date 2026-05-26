@@ -16,5 +16,7 @@ CCTV-14少儿
 CCTV-15音乐
 CCTV-16奥林匹克
 CCTV-17农业农村
+第一剧场
+怀旧剧场
 CCTV4k
 CCTV8K
