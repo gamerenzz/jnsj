@@ -59,7 +59,6 @@ def load_channel_dictionaries() -> Dict[str, List[str]]:
         'ws': '主频道/卫视频道.txt',
         'dy': '主频道/电影.txt',
         'gj': '主频道/国际台.txt',
-        'gd': '地方台/广东频道.txt',
         'hb': '地方台/湖北频道.txt'
     }
     
@@ -370,7 +369,6 @@ def main():
         'ys': "央视频道", 
         'ws': "卫视频道",
         'gj': "国际台",
-        'gd': "广东频道",
         'dy': "电影频道",
         'hb': "湖北频道"
     }
@@ -389,7 +387,7 @@ def main():
 
     # 获取处理后的频道源并添加到M3U和TXT文件
     total_count = 0
-    categories_order = ['zh', 'ys', 'ws', 'gj', 'gd', 'dy', 'hb']
+    categories_order = ['zh', 'ys', 'ws', 'gj', 'dy', 'hb']
     
     for category in categories_order:
         name = category_names[category]
