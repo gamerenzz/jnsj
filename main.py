@@ -180,7 +180,7 @@ class ChannelSourceManager:
             return False
             
         # 黑名单检查
-        if any(black_item in url for black_item in self.blacklist if black_item.strip()):
+        if url in self.blacklist:
             return False
             
         self.seen_urls.add(url)
