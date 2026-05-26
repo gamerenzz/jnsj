@@ -59,9 +59,8 @@ def load_channel_dictionaries() -> Dict[str, List[str]]:
         'ws': '主频道/卫视频道.txt',
         'dy': '主频道/电影.txt',
         'gj': '主频道/国际台.txt',
-        'zb': '主频道/直播中国.txt',
         'gd': '地方台/广东频道.txt',
-        'hain': '地方台/海南频道.txt'
+        'hb': '地方台/湖北频道.txt'
     }
     
     for key, path in categories.items():
