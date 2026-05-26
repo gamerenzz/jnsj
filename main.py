@@ -389,7 +389,7 @@ def main():
 
     # 获取处理后的频道源并添加到M3U和TXT文件
     total_count = 0
-    categories_order = ['zh', 'ys', 'ws', 'gj', 'gd', 'hain', 'dy', 'zb']
+    categories_order = ['zh', 'ys', 'ws', 'gj', 'gd', 'dy', 'hb']
     
     for category in categories_order:
         name = category_names[category]
