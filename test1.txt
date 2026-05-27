@@ -1,3 +1,9 @@
-https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/others_output.txt
+#https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/refs/heads/main/others_output.txt
 https://raw.githubusercontent.com/eric1216chan/eric1216tvbox/refs/heads/main/18live%2004-09-2025%E5%AE%9A%E5%88%B6.txt
 https://raw.githubusercontent.com/Supprise0901/TVBox_live/main/live.txt
+
+https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.txt
+https://raw.githubusercontent.com/adminouyang/231006/refs/heads/main/py/TvSources/iptv_speed.txt
+https://raw.githubusercontent.com/adminouyang/231006/refs/heads/main/py/%E4%BC%98%E8%B4%A8%E6%BA%90/output/ipv4/result.txt
+https://raw.githubusercontent.com/lml1971/tv/refs/heads/main/tv.txt
+https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u
