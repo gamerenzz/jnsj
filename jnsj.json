@@ -1,6 +1,10 @@
 {
   "urls": [
     {
+      "url": "http://肥猫.com",
+      "name": "肥猫"
+    },
+    {
       "url": "http://tvbox.王二小放牛娃.top",
       "name": "牛二(中文top)"
     },
@@ -62,8 +66,8 @@
     }
   ],
   "last_updated": "2026-04-23",
-  "valid_count": 15,
+  "valid_count": 16,
   "invalid_count": 0,
-  "last_validated": "2026-05-26 23:23:14",
-  "original_count": 15
+  "last_validated": "2026-05-26 05:08:51",
+  "original_count": 16
 }
