@@ -374,10 +374,9 @@ def main():
     }
     
     # 创建M3U文件内容
-    all_m3u_lines = ["#EXTM3U", f'#EXTINF:-1 tvg-id="EPG" tvg-name="节目预告" tvg-logo="https://11.112114.xyz/logo/EPG.png" group-title="节目预告",节目预告\nhttp://epg.51zmt.top:8000/api/diyp/?ch={{name}}&date={{date}}', '']
+    all_m3u_lines = ["#EXTM3U"]
     
     # 添加EPG信息
-    all_m3u_lines.append("#EXTGRP:节目单信息")
     all_m3u_lines.append("#PLAYLIST:电视直播")
     all_m3u_lines.append(f"#更新时间:{formatted_time}")
     all_m3u_lines.append('')
