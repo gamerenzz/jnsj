@@ -1,5 +1,5 @@
-# 更新时间: 2026-05-27 06:06:42
-# 有效URL数量: 74
+# 更新时间: 2026-05-27 06:19:57
+# 有效URL数量: 79
 # 无效URL数量: 0
 
 https://raw.githubusercontent.com/nianxinmj/nxpz/refs/heads/main/lib/live.txt
@@ -76,7 +76,6 @@ https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u
 https://sub.ottiptv.cc/bililive.m3u
 http://d.jsy777.top/box/tvzb9.txt
 https://raw.githubusercontent.com/kimwang1978/collect-txt/refs/heads/main/bbxx.m3u
-
 https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.txt
 https://raw.githubusercontent.com/adminouyang/231006/refs/heads/main/py/TvSources/iptv_speed.txt
 https://raw.githubusercontent.com/adminouyang/231006/refs/heads/main/py/%E4%BC%98%E8%B4%A8%E6%BA%90/output/ipv4/result.txt
