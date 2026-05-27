@@ -59,7 +59,8 @@ def load_channel_dictionaries() -> Dict[str, List[str]]:
         'ws': '主频道/卫视频道.txt',
         'dy': '主频道/电影.txt',
         'gj': '主频道/国际台.txt',
-        'hb': '地方台/湖北频道.txt'
+        'zb': '主频道/直播中国.txt',
+        'hb': '地方台/湖北频道.txt'  # 修改为湖北频道，移除了 gd 和 hain
     }
     
     for key, path in categories.items():
@@ -179,8 +180,8 @@ class ChannelSourceManager:
         if url in self.seen_urls:
             return False
             
-        # 黑名单检查
-        if url in self.blacklist:
+        # 黑名单检查（模糊匹配：只要直播源URL包含黑名单中的任意一项，就进行拦截）
+        if any(black_item in url for black_item in self.blacklist if black_item.strip()):
             return False
             
         self.seen_urls.add(url)
@@ -358,10 +359,9 @@ def main():
     # 验证所有源并选择最快的10个
     source_manager.validate_and_sort_sources()
 
-    # 获取当前的 UTC 时间
+    # 获取当前的 UTC 时间并格式化为带秒和横线的格式
     beijing_time = datetime.now(timezone.utc) + timedelta(hours=8)
-    formatted_time = beijing_time.strftime("%Y%m%d %H:%M")
-    version = formatted_time + ",https://www.cloudplains.cn/tv202303.txt"
+    formatted_time = beijing_time.strftime("%Y-%m-%d %H:%M:%S")
 
     # 分类名称映射
     category_names = {
@@ -369,24 +369,25 @@ def main():
         'ys': "央视频道", 
         'ws': "卫视频道",
         'gj': "国际台",
+        'hb': "湖北频道",  # 移除了 gd 和 hain，新增 hb
         'dy': "电影频道",
-        'hb': "湖北频道"
+        'zb': "直播中国"
     }
     
-    # 创建M3U文件内容
-    all_m3u_lines = ["#EXTM3U"]
-    
-    # 添加EPG信息
-    all_m3u_lines.append("#PLAYLIST:电视直播")
-    all_m3u_lines.append(f"#更新时间:{formatted_time}")
-    all_m3u_lines.append('')
+    # 创建M3U文件内容（最上面加上免责与时间注释）
+    all_m3u_lines = [
+        "#EXTM3U",
+        f"#更新时间: {formatted_time}（北京时间）仅供娱乐，切勿商用。",
+        "#PLAYLIST:电视直播",
+        ""
+    ]
 
-    # 创建TXT文件内容
-    all_txt_lines = ["更新时间,#genre#", f"{formatted_time},https://jnsj.cloudplains.dpdns.org/tv202303.txt", ""]
+    # 创建TXT文件内容（最上方不再放更新时间分组，初始化为空列表）
+    all_txt_lines = []
 
     # 获取处理后的频道源并添加到M3U和TXT文件
     total_count = 0
-    categories_order = ['ys', 'ws', 'gj', 'zh', 'hb', 'dy']
+    categories_order = ['ys', 'ws', 'zh', 'hb', 'dy']  # 调整后的排序顺序
     
     for category in categories_order:
         name = category_names[category]
@@ -407,6 +408,19 @@ def main():
         channel_txt_lines = source_manager.get_txt_lines(channel_dictionaries[category])
         all_txt_lines.extend(channel_txt_lines)
         all_txt_lines.append('')
+
+    # ==================== 将“更新时间”分组放到所有频道的最后下方 ====================
+    
+    # 追加到 M3U 文件末尾
+    all_m3u_lines.append("#========== 更新时间 ==========#")
+    all_m3u_lines.append(f'#EXTINF:-1 tvg-id="更新时间" tvg-name="更新时间" tvg-logo="" group-title="更新时间",更新时间: {formatted_time}（北京时间）仅供娱乐，切勿商用。')
+    all_m3u_lines.append("https://jnsj.cloudplains.dpdns.org/tv202303.txt")
+    all_m3u_lines.append('')
+
+    # 追加到 TXT 文件末尾
+    all_txt_lines.append("更新时间,#genre#")
+    all_txt_lines.append(f"{formatted_time}（北京时间）仅供娱乐，切勿商用。,https://jnsj.cloudplains.dpdns.org/tv202303.txt")
+    all_txt_lines.append('')
 
     # 保存M3U文件
     m3u_output_file = "tv202303.m3u"
