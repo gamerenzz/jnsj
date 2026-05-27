@@ -377,7 +377,7 @@ def main():
     # 创建M3U文件内容（最上面加上免责与时间注释）
     all_m3u_lines = [
         "#EXTM3U",
-        f"#更新时间: {formatted_time}（北京时间）仅供娱乐，切勿商用。",
+        f"#{formatted_time}（北京时间）仅供娱乐，切勿商用。",
         "#PLAYLIST:电视直播",
         ""
     ]
