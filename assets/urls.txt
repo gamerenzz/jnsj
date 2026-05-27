@@ -76,3 +76,4 @@ https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u
 https://sub.ottiptv.cc/bililive.m3u
 http://d.jsy777.top/box/tvzb9.txt
 https://raw.githubusercontent.com/kimwang1978/collect-txt/refs/heads/main/bbxx.m3u
+https://t.freetv.fun/m3u/playlist_original.txt
