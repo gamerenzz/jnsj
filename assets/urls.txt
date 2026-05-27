@@ -1,6 +1,6 @@
-# 更新时间: 2026-05-27 05:33:41
+# 更新时间: 2026-05-27 05:37:32
 # 有效URL数量: 74
-# 无效URL数量: 0
+# 无效URL数量: 1
 
 https://raw.githubusercontent.com/nianxinmj/nxpz/refs/heads/main/lib/live.txt
 https://live.hacks.tools/tv/iptv4.txt
@@ -76,4 +76,3 @@ https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u
 https://sub.ottiptv.cc/bililive.m3u
 http://d.jsy777.top/box/tvzb9.txt
 https://raw.githubusercontent.com/kimwang1978/collect-txt/refs/heads/main/bbxx.m3u
-https://t.freetv.fun/m3u/playlist_original.txt
