@@ -21,10 +21,6 @@
       "name": "挺好"
     },
     {
-      "url": "http://550.3vcn.work/wdjyys.json",
-      "name": "金鹰"
-    },
-    {
       "url": "https://gitlab.com/duomv/dzhipy/-/raw/main/index.json",
       "name": "道长"
     },
@@ -34,8 +30,8 @@
     }
   ],
   "last_updated": "2026-04-23",
-  "valid_count": 8,
-  "invalid_count": 0,
-  "last_validated": "2026-07-28 11:51:43",
+  "valid_count": 7,
+  "invalid_count": 1,
+  "last_validated": "2026-07-29 03:58:45",
   "original_count": 8
 }
